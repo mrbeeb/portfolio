@@ -1,10 +1,9 @@
-
 import { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  experimental: {
-    runtime: 'nodejs', // enables Netlify plugin to handle prerendered pages & forms
-  },
+  // experimental: {
+  //   runtime: 'nodejs', // removed because Netlify build fails with this
+  // },
 };
 
 export default nextConfig;
