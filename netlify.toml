@@ -1,9 +1,11 @@
 [build]
   command = "npm run build"
   publish = ".next"
+  functions = "netlify/functions"
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
-[functions]
-  directory = "netlify/functions"
+# Optional environment variables
+#[context.production.environment]
+#  NEXT_PUBLIC_API_URL = "https://yourapi.com"

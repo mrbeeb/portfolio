@@ -1,20 +1,30 @@
-# netlify.toml
-
-[build]
-  command = "npm run build"
-  publish = ".next"
-  functions = "netlify/functions"
-
-# Required for Next.js support on Netlify
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
-
-# Optional: Environment variables
-#[context.production.environment]
-#  NEXT_PUBLIC_API_URL = "https://yourapi.com"
-
-# Redirects (optional for SPA routing)
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+{
+  "name": "portfolio",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "15.5.0",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "tailwindcss": "^4",
+    "framer-motion": "^12.23.12"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "typescript": "^5",
+    "eslint": "^9",
+    "eslint-config-next": "15.5.0",
+    "@tailwindcss/postcss": "^4"
+  },
+  "engines": {
+    "node": "20.x",
+    "npm": "10.x"
+  }
+}
