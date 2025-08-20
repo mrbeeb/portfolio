@@ -1,7 +1,10 @@
-import type { NextConfig } from "next";
+
+import { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  experimental: {
+    runtime: 'nodejs', // enables Netlify plugin to handle prerendered pages & forms
+  },
 };
 
 export default nextConfig;
